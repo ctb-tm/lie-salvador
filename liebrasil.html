@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Incentivo Federal (IR) - CTB</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f0f4f8; }
-        .container { max-width: 1200px; margin: auto; background-color: #f0f4f8;}
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 20px; background-color: #f0f4f8; color: #000080;}
+        .container { max-width: 1200px; margin: auto; }
         header { background: #fff; padding: 15px 20px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-radius: 8px; }
         .header-logo { height: 70px; }
         header h1 { margin: 0; font-size: 1.6em; color: #000080; text-align: center; }
@@ -16,13 +16,16 @@
         .section { background: #fff; padding: 25px; margin-top: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
         h2 { border-bottom: 2px solid #000080; padding-bottom: 10px; color: #000080; font-size: 1.5em; }
         .columns { display: flex; flex-wrap: wrap; gap: 20px; text-align: justify; }
-        .columns > div { flex: 1; min-width: 300px; background-color: #f8fcff; padding: 20px; border-left: 5px solid #000080; border-radius: 5px;}
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.9em;}
-        th, td { padding: 12px; border: 1px solid #ddd; text-align: left; color: #000080;}
-        th { background-color: #000080; color: white; }
-        .situacao-badge { padding: 5px 10px; border-radius: 15px; color: white; font-size: 0.8em; font-weight: bold;}
-        .captacao { background-color: #257F39; }
-        .enviada { background-color: #FF8F00; }
+        .columns > div { flex: 1; min-width: 300px; background-color: #f0f8ff; padding: 20px; border-left: 5px solid #000080; border-radius: 5px;}
+        .projetos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(500px,1fr));gap:30px;margin-top:20px;}
+        .projeto-card{background:white;border-radius:15px;padding:30px;box-shadow:0 8px 24px rgba(0,0,0,0.1);border-left:6px solid #257F39;transition:transform 0.3s ease,box-shadow 0.3s ease;}
+        .projeto-card:hover{transform:translateY(-5px);box-shadow:0 12px 32px rgba(0,0,0,0.15);}
+        .projeto-header{display:flex;align-items:center;margin-bottom:20px;border-bottom:2px solid #F0F8FF;padding-bottom:15px;}
+        .icone-esporte{font-size:3em;margin-right:20px;}
+        .nome-projeto{font-size:1.4em;font-weight:bold;color:#0F346B;}
+        .valor-container{display:flex;justify-content:space-between;align-items:center;background:#F8FCFF;padding:15px;border-radius:10px;border:2px solid #E0F4E0;}
+        .valor{font-size:1.8em;font-weight:bold;color:#257F39;}
+        .numero-projeto{background:#0F346B;color:white;padding:8px 15px;border-radius:25px;font-size:0.9em;font-weight:bold;}
         .sponsor-section { background-color: #00005a; color: white; padding: 30px; margin-top: 30px; border-radius: 8px; text-align: center; }
         .sponsor-section h2 { color: #FFC107; border-bottom-color: #FFC107; }
         .sponsor-form input, .sponsor-form button { width: calc(100% - 24px); padding: 12px; margin-top: 10px; border-radius: 5px; border: none; font-size: 1em; }
@@ -44,7 +47,7 @@
             <a href="fazatleta.html">BAHIA (ICMS)</a>
             <a href="liebrasil.html" class="active">FEDERAL (IR)</a>
         </nav>
-
+        
         <div class="section">
             <h2>Como Funciona o Incentivo (via Imposto de Renda)</h2>
             <p>A Lei de Incentivo ao Esporte (LIE) Federal permite que o valor do patrocínio a projetos aprovados seja deduzido diretamente do Imposto de Renda (IR) devido, tanto por Pessoas Físicas quanto Jurídicas.</p>
@@ -62,67 +65,43 @@
 
         <div class="section">
             <h2>Projetos Aprovados para Captação (Federal)</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nº do Projeto</th>
-                        <th>Título</th>
-                        <th>Valor Aprovado (R$)</th>
-                        <th>Situação</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>2401311</td>
-                        <td>Estudar em Barrocas com Tênis de Mesa</td>
-                        <td>275.000,00</td>
-                        <td><span class="situacao-badge captacao">Disponível para Captação</span></td>
-                    </tr>
-                    <tr>
-                        <td>2401343</td>
-                        <td>Estudar em Simões Filho com Tênis de Mesa</td>
-                        <td>290.000,00</td>
-                        <td><span class="situacao-badge captacao">Disponível para Captação</span></td>
-                    </tr>
-                    <tr>
-                        <td>2401345</td>
-                        <td>Estudar em Teofilândia com Tênis de Mesa</td>
-                        <td>265.000,00</td>
-                        <td><span class="situacao-badge captacao">Disponível para Captação</span></td>
-                    </tr>
-                    <tr>
-                        <td>2403761</td>
-                        <td>Educar com Tênis de Mesa ANO 3</td>
-                        <td>350.000,00</td>
-                        <td><span class="situacao-badge captacao">Disponível para Captação</span></td>
-                    </tr>
-                    <tr>
-                        <td>2501117</td>
-                        <td>Oficinas Educacionais de Tênis em Salvador BA Ano 2</td>
-                        <td>420.000,00</td>
-                        <td><span class="situacao-badge captacao">Disponível para Captação</span></td>
-                    </tr>
-                    <tr>
-                        <td>2501213</td>
-                        <td>Festival de Esportes da Bahia</td>
-                        <td>300.000,00</td>
-                        <td><span class="situacao-badge captacao">Disponível para Captação</span></td>
-                    </tr>
-                    <tr>
-                        <td>2502377</td>
-                        <td>Oficinas Educacionais de Tênis de Mesa na Bahia – Ano 2</td>
-                        <td>480.000,00</td>
-                        <td><span class="situacao-badge enviada">Proposta Enviada</span></td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="projetos-grid">
+                <div class="projeto-card">
+                    <div class="projeto-header"><div class="icone-esporte">🏓</div><div class="projeto-info"><div class="nome-projeto">Estudar em Barrocos com Tênis de Mesa</div></div></div>
+                    <div class="valor-container"><div class="valor">R$ 446.141,44</div><div class="numero-projeto">Projeto 2401311</div></div>
+                </div>
+                <div class="projeto-card">
+                    <div class="projeto-header"><div class="icone-esporte">🏓</div><div class="projeto-info"><div class="nome-projeto">Estudar em Simões Filho com Tênis de Mesa</div></div></div>
+                    <div class="valor-container"><div class="valor">R$ 446.141,44</div><div class="numero-projeto">Projeto 2401343</div></div>
+                </div>
+                <div class="projeto-card">
+                    <div class="projeto-header"><div class="icone-esporte">🏓</div><div class="projeto-info"><div class="nome-projeto">Estudar em Teofilândia com Tênis de Mesa</div></div></div>
+                    <div class="valor-container"><div class="valor">R$ 446.141,44</div><div class="numero-projeto">Projeto 2401345</div></div>
+                </div>
+                <div class="projeto-card">
+                    <div class="projeto-header"><div class="icone-esporte">🏓</div><div class="projeto-info"><div class="nome-projeto">EDUCAR COM TÊNIS DE MESA ANO 3</div></div></div>
+                    <div class="valor-container"><div class="valor">R$ 707.312,56</div><div class="numero-projeto">Projeto 2403761</div></div>
+                </div>
+                <div class="projeto-card">
+                    <div class="projeto-header"><div class="icone-esporte">🎾</div><div class="projeto-info"><div class="nome-projeto">Oficinas Educacionais de Tênis em Salvador BA Ano 2</div></div></div>
+                    <div class="valor-container"><div class="valor">R$ 1.422.834,56</div><div class="numero-projeto">Projeto 2501117</div></div>
+                </div>
+                <div class="projeto-card">
+                    <div class="projeto-header"><div class="icone-esporte">🏆</div><div class="projeto-info"><div class="nome-projeto">FESTIVAL DE ESPORTES DA BAHIA</div></div></div>
+                    <div class="valor-container"><div class="valor">R$ 940.459,52</div><div class="numero-projeto">Projeto 2501213</div></div>
+                </div>
+                <div class="projeto-card">
+                    <div class="projeto-header"><div class="icone-esporte">🏓</div><div class="projeto-info"><div class="nome-projeto">Oficinas Educacionais de Tênis de Mesa na Bahia – Ano 2</div></div></div>
+                    <div class="valor-container"><div class="valor">R$ 1.420.619,43</div><div class="numero-projeto">Projeto 2502377</div></div>
+                </div>
+            </div>
         </div>
 
         <div class="section sponsor-section">
-            <h2>QUERO PATROCINAR COM IR</h2>
+            <h2>QUERO PATROCINAR</h2>
             <p>Preencha os dados abaixo e entraremos em contato.</p>
             <form action="mailto:paulo@ctb-ba.com.br" method="post" enctype="text/plain" class="sponsor-form">
-                <input type="text" name="Nome da Empresa" placeholder="NOME DA EMPRESA / PESSOA FÍSICA" required>
+                <input type="text" name="Interesse em (Federal)" placeholder="NOME DA EMPRESA / PESSOA FÍSICA" required>
                 <input type="text" name="CNPJ_CPF" placeholder="CNPJ / CPF" required>
                 <input type="email" name="E-mail" placeholder="E-MAIL" required>
                 <input type="text" name="Whatsapp" placeholder="WHATSAPP" required>
