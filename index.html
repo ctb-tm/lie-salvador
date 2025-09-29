@@ -10,76 +10,50 @@
         header { background: #fff; padding: 15px 20px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-radius: 8px; }
         .header-logo { height: 70px; }
         header h1 { margin: 0; font-size: 1.6em; color: #000080; text-align: center; }
-        
         nav { text-align: center; margin-top: 20px; background-color: #fff; padding: 10px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);}
         nav a { text-decoration: none; color: #000080; padding: 10px 20px; margin: 0 5px; border-radius: 5px; font-weight: bold; transition: background-color 0.3s; }
         nav a:hover, nav a.active { background-color: #FFC107; color: #000080; }
         
-        .section { background: #fff; padding: 25px; margin-top: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
-        h2 { border-bottom: 2px solid #000080; padding-bottom: 10px; color: #000080; font-size: 1.5em; }
-        p { line-height: 1.6; }
-        ol { padding-left: 20px; line-height: 1.6; }
-
-        .info-box {
-            background-color: #f0f8ff;
-            border-left: 5px solid #000080;
-            padding: 20px;
-            margin-top: 20px;
+        /* NOVO BOX DE DOAÇÃO FIXO */
+        .donate-box {
+            background-color: white;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-        }
-        .info-box h2 {
-            border-bottom: none;
-            padding-bottom: 0;
-            margin-top: 0;
-        }
-
-        .highlight-projects {
-            background-color: #fff9e6; /* Fundo amarelo bem claro */
-            border: 2px solid #FFC107;
-            padding: 25px;
-            margin-top: 20px;
-            border-radius: 8px;
-        }
-        .highlight-projects h2 {
-            color: #000080;
-            border-bottom-color: #FFC107;
-        }
-        .highlight-projects h2::before {
-            content: '🏆 '; /* Ícone de troféu */
-            margin-right: 10px;
-        }
-        
-        /* NOVO ESTILO PARA O AVISO */
-        .aviso-projetos {
-            background-color: #e6f0ff; /* Azul bem claro */
-            border: 1px solid #000080;
-            color: #000080;
-            padding: 15px;
-            margin-top: 20px;
-            margin-bottom: 20px; /* Espaço antes da grade de projetos */
-            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 10px;
+            width: 120px;
             text-align: center;
-            font-size: 1.1em;
+            float: right;
+            margin-top: 20px;
+            margin-left: 20px;
+            cursor: pointer;
         }
-
-        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-top: 20px; }
-        .project-link { display: flex; align-items: center; gap: 15px; padding: 15px; background-color: #fff; border-left: 5px solid #000080; border-radius: 5px; text-decoration: none; color: #000080; font-weight: bold; transition: background-color 0.3s, transform 0.3s; }
-        .project-link:hover { background-color: #e2eafc; transform: translateY(-3px); border-left-color: #FFC107; }
-        .project-link .icon { font-size: 1.5em; }
+        .donate-box img {
+            width: 100px;
+            height: 100px;
+        }
+        .donate-box p {
+            font-weight: bold;
+            color: #000080;
+            margin: 5px 0 0 0;
+        }
         
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        th, td { padding: 12px; border: 1px solid #c8d4e3; text-align: left; color: #000080; }
-        th { background-color: #000080; color: white; }
-        tr:nth-child(even) { background-color: #E6E6FA; }
-        tr:nth-child(odd) { background-color: #CCCCFF; }
-        .highlight { font-size: 0.9em; font-style: italic; color: #555; margin-top: 15px; text-align: center; }
+        .main-content { overflow: auto; } /* Para conter o float do box */
 
-        .sponsor-section { background-color: #00005a; color: white; padding: 30px; margin-top: 30px; border-radius: 8px; text-align: center; }
+        /* Modal do QR Code */
+        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.6); }
+        .modal-content { background-color: #fefefe; margin: 10% auto; padding: 20px; border: 1px solid #888; width: 90%; max-width: 350px; text-align: center; border-radius: 10px; }
+        .close-button { color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
+        .pix-copy-area { margin-top: 15px; }
+        .pix-copy-area input { width: calc(100% - 22px); padding: 10px; font-size: 0.9em; border: 1px solid #ccc; border-radius: 5px; }
+        .pix-copy-area button { background-color: #000080; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; margin-top: 5px; }
+
+        .section, .info-box, .highlight-projects { background: #fff; padding: 25px; margin-top: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
+        h2 { border-bottom: 2px solid #000080; padding-bottom: 10px; color: #000080; font-size: 1.5em; }
+        .sponsor-section { background-color: #00005a; color: white; padding: 30px; margin-top: 20px; border-radius: 8px; text-align: center; }
         .sponsor-section h2 { color: #FFC107; border-bottom-color: #FFC107; }
         .sponsor-form input, .sponsor-form button { width: calc(100% - 24px); padding: 12px; margin-top: 10px; border-radius: 5px; border: none; font-size: 1em; }
-        .sponsor-form button { background-color: #FFC107; color: #000080; font-weight: bold; cursor: pointer; }
-        footer { display: flex; align-items: center; gap: 15px; padding: 20px; background: #fff; color: #000080; margin-top: 20px; border-radius: 8px; }
+        .sponsor-form button { background-color: #FFC107; color: #000080; font-weight: bold; }
+        footer { clear: both; display: flex; align-items: center; gap: 15px; padding: 20px; background: #fff; color: #000080; margin-top: 20px; border-radius: 8px; }
         .footer-logo { height: 50px; }
     </style>
 </head>
@@ -97,67 +71,17 @@
             <a href="liebrasil.html">FEDERAL (IR)</a>
         </nav>
 
-        <div class="info-box">
-            <h2>O que é o Programa VIVA ESPORTE?</h2>
-            <p>A Prefeitura de Salvador, através do <strong>Decreto Nº 37.766/2023</strong> e da <strong>Lei Municipal nº 9.738/2023</strong>, criou o "Programa de Incentivo ao Esporte - VIVA ESPORTE". Este programa é uma poderosa ferramenta que permite a empresas que pagam o Imposto Sobre Serviços (ISS) em Salvador direcionarem parte desse imposto para financiar diretamente projetos esportivos.</p>
-        </div>
-
-        <div class="info-box">
-            <h2>Como Funciona o Processo?</h2>
-            <ol>
-                <li><strong>Aprovação do Projeto:</strong> Atletas e entidades submetem seus projetos, que são rigorosamente avaliados e aprovados pela prefeitura.</li>
-                <li><strong>Busca por Patrocinadores:</strong> Com o projeto aprovado, o proponente busca empresas interessadas em associar sua marca ao esporte.</li>
-                <li><strong>Investimento Direto:</strong> A empresa patrocinadora deposita o valor do patrocínio diretamente na conta do projeto.</li>
-                <li><strong>Abatimento Fiscal:</strong> A empresa recebe o abatimento do valor investido no ISS que tem a pagar, tornando o apoio praticamente a custo zero.</li>
-            </ol>
-        </div>
-
-        <div class="section highlight-projects">
-            <h2>Projetos Aprovados (ISS Salvador)</h2>
-            <p>Conheça alguns dos projetos que já foram aprovados e estão aptos a receber patrocínio através da lei de incentivo.</p>
-            
-            <div class="aviso-projetos">
-                <strong>Aviso:</strong> Clique nos projetos abaixo para visualizar a apresentação individual de cada oportunidade.
+        <div class="main-content">
+            <div id="donate-box" class="donate-box">
+                <img src="qrcode.png" alt="QR Code PIX">
+                <p><strong>DOE</strong></p>
             </div>
 
-             <div class="project-grid">
-                 <a href="https://ctb-tm.github.io/thiagosilva-tm/" class="project-link" target="_blank"><span class="icon">🏓</span><span>THIAGO SILVA</span></a>
-                 <a href="https://ctb-tm.github.io/davilobo-tm/" class="project-link" target="_blank"><span class="icon">🏓</span><span>DAVI LOBO</span></a>
-                 <a href="https://ctb-tm.github.io/marceloferrao-tm/" class="project-link" target="_blank"><span class="icon">🏓</span><span>MARCELO FERRÃO</span></a>
-                 <a href="https://ctb-tm.github.io/rafaeloliveira-tm/" class="project-link" target="_blank"><span class="icon">🏓</span><span>RAFAEL OLIVEIRA</span></a>
-                 <a href="https://ctb-tm.github.io/handysolar-open-tennis/" class="project-link" target="_blank"><span class="icon">🎾</span><span>Tênis</span></a>
-                 <a href="https://pfeira.github.io/ctb-salvador/" class="project-link" target="_blank"><span class="icon">🏓</span><span>Tênis de Mesa</span></a>
+            <div class="info-box">
+                <h2>O que é o Programa VIVA ESPORTE?</h2>
+                <p>O programa "VIVA ESPORTE" da Prefeitura de Salvador permite que empresas contribuintes do <strong>Imposto Sobre Serviços (ISS)</strong> destinem até 20% do imposto devido para financiar projetos esportivos na cidade.</p>
             </div>
-        </div>
-        
-        <div class="section">
-            <h2>Simulação de Incentivo Fiscal via ISS</h2>
-            <p>A lei permite que empresas destinem <strong>até 20% do valor anual do ISS</strong> devido. Veja na tabela o potencial de investimento.</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Valor ISS Pago/Ano (R$)</th>
-                        <th>Potencial de Incentivo (20%) (R$)</th>
-                        <th>Aporte Mensal Máximo (R$)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>100.000</td><td>20.000</td><td>1.666,67</td></tr>
-                    <tr><td>200.000</td><td>40.000</td><td>3.333,33</td></tr>
-                    <tr><td>300.000</td><td>60.000</td><td>5.000,00</td></tr>
-                    <tr><td>400.000</td><td>80.000</td><td>6.666,67</td></tr>
-                    <tr><td>500.000</td><td>100.000</td><td>8.333,33</td></tr>
-                    <tr><td>600.000</td><td>120.000</td><td>10.000,00</td></tr>
-                    <tr><td>700.000</td><td>140.000</td><td>11.666,67</td></tr>
-                    <tr><td>800.000</td><td>160.000</td><td>13.333,33</td></tr>
-                    <tr><td>900.000</td><td>180.000</td><td>15.000,00</td></tr>
-                    <tr><td>1.000.000</td><td>200.000</td><td>16.666,67</td></tr>
-                    <tr><td>1.100.000</td><td>220.000</td><td>18.333,33</td></tr>
-                    <tr><td>1.200.000</td><td>240.000</td><td>20.000,00</td></tr>
-                </tbody>
-            </table>
-            <p class="highlight">O incentivo não é válido para empresas do Simples Nacional.</p>
-        </div>
+            </div>
 
         <div class="section sponsor-section">
             <h2>QUERO PATROCINAR</h2>
@@ -177,5 +101,36 @@
             Paulo Carneiro - paulo@ctb.com.br - 71-98530-4903</p>
         </footer>
     </div>
+
+    <div id="pix-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>Doação para o Projeto</h3>
+            <p><strong>Beneficiário:</strong> Clube dos Tenistas da Bahia</p>
+            <p><strong>CNPJ:</strong> 23.146.328/0001-16</p>
+            <img src="qrcode.png" alt="QR Code PIX">
+            <div class="pix-copy-area">
+                <p><strong>PIX Copia e Cola:</strong></p>
+                <input type="text" value="SEU_CODIGO_PIX_COPIA_E_COLA_VAI_AQUI" id="pix-code" readonly>
+                <button id="copy-button">Copiar Código</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var modal = document.getElementById("pix-modal");
+        var btn = document.getElementById("donate-box");
+        var span = document.getElementsByClassName("close-button")[0];
+        btn.onclick = function() { modal.style.display = "block"; }
+        span.onclick = function() { modal.style.display = "none"; }
+        window.onclick = function(event) { if (event.target == modal) { modal.style.display = "none"; } }
+
+        document.getElementById("copy-button").addEventListener("click", function() {
+            var copyText = document.getElementById("pix-code");
+            copyText.select();
+            document.execCommand("copy");
+            alert("Código PIX copiado!");
+        });
+    </script>
 </body>
 </html>
