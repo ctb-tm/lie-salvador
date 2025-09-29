@@ -49,6 +49,19 @@
             content: '🏆 '; /* Ícone de troféu */
             margin-right: 10px;
         }
+        
+        /* NOVO ESTILO PARA O AVISO */
+        .aviso-projetos {
+            background-color: #e6f0ff; /* Azul bem claro */
+            border: 1px solid #000080;
+            color: #000080;
+            padding: 15px;
+            margin-top: 20px;
+            margin-bottom: 20px; /* Espaço antes da grade de projetos */
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.1em;
+        }
 
         .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-top: 20px; }
         .project-link { display: flex; align-items: center; gap: 15px; padding: 15px; background-color: #fff; border-left: 5px solid #000080; border-radius: 5px; text-decoration: none; color: #000080; font-weight: bold; transition: background-color 0.3s, transform 0.3s; }
@@ -74,7 +87,7 @@
     <div class="container">
         <header>
             <img src="ctb.png" alt="Logo CTB" class="header-logo">
-            <h1>LEI DE INCENTIVO SALVADOR</h1>
+            <h1>LEI DE INCENTIVO - SALVADOR</h1>
             <img src="viva.png" alt="Logo Viva Esporte" class="header-logo">
         </header>
 
@@ -101,14 +114,19 @@
 
         <div class="section highlight-projects">
             <h2>Projetos Aprovados (ISS Salvador)</h2>
-            <p>Conheça alguns dos projetos que já foram aprovados e estão aptos a receber patrocínio através da lei de incentivo. Clique para saber mais sobre cada oportunidade.</p>
+            <p>Conheça alguns dos projetos que já foram aprovados e estão aptos a receber patrocínio através da lei de incentivo.</p>
+            
+            <div class="aviso-projetos">
+                <strong>Aviso:</strong> Clique nos projetos abaixo para visualizar a apresentação individual de cada oportunidade.
+            </div>
+
              <div class="project-grid">
                  <a href="https://ctb-tm.github.io/thiagosilva-tm/" class="project-link" target="_blank"><span class="icon">🏓</span><span>THIAGO SILVA</span></a>
                  <a href="https://ctb-tm.github.io/davilobo-tm/" class="project-link" target="_blank"><span class="icon">🏓</span><span>DAVI LOBO</span></a>
                  <a href="https://ctb-tm.github.io/marceloferrao-tm/" class="project-link" target="_blank"><span class="icon">🏓</span><span>MARCELO FERRÃO</span></a>
                  <a href="https://ctb-tm.github.io/rafaeloliveira-tm/" class="project-link" target="_blank"><span class="icon">🏓</span><span>RAFAEL OLIVEIRA</span></a>
                  <a href="https://ctb-tm.github.io/handysolar-open-tennis/" class="project-link" target="_blank"><span class="icon">🎾</span><span>Tênis</span></a>
-                 <a href="https://pfeira.github.io/ctb-salvador/" class="project-link" target="_blank"><span class="icon">🏓</span><span>Tênis de Mesa</span></a>
+                 <a href="https://ctb-tm.github.io/ctb-salvador/" class="project-link" target="_blank"><span class="icon">🏓</span><span>Tênis de Mesa</span></a>
             </div>
         </div>
         
@@ -142,7 +160,7 @@
         </div>
 
         <div class="section sponsor-section">
-            <h2>QUERO PATROCINAR COM ISS</h2>
+            <h2>QUERO PATROCINAR</h2>
             <p>Preencha os dados abaixo e entraremos em contato.</p>
             <form action="mailto:paulo@ctb-ba.com.br" method="post" enctype="text/plain" class="sponsor-form">
                 <input type="text" name="Interesse em (Salvador)" placeholder="NOME DA EMPRESA" required>
