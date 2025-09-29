@@ -13,21 +13,20 @@
         nav { text-align: center; margin-top: 20px; background-color: #fff; padding: 10px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);}
         nav a { text-decoration: none; color: #000080; padding: 10px 20px; margin: 0 5px; border-radius: 5px; font-weight: bold; transition: background-color 0.3s; }
         nav a:hover, nav a.active { background-color: #FFC107; color: #000080; }
-        
+        .main-content { overflow: auto; }
         .donate-box { background-color: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 10px; width: 120px; text-align: center; float: right; margin-top: 20px; margin-left: 20px; cursor: pointer; }
         .donate-box img { width: 100px; height: 100px; }
         .donate-box p { font-weight: bold; color: #000080; margin: 5px 0 0 0; }
-        .main-content { overflow: auto; }
-
+        .section { background: #fff; padding: 25px; margin-top: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
+        h2 { border-bottom: 2px solid #000080; padding-bottom: 10px; color: #000080; font-size: 1.5em; }
+        .columns { display: flex; flex-wrap: wrap; gap: 20px; }
+        .columns > div { flex: 1; min-width: 300px; }
         .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.6); }
         .modal-content { background-color: #fefefe; margin: 10% auto; padding: 20px; border: 1px solid #888; width: 90%; max-width: 350px; text-align: center; border-radius: 10px; }
         .close-button { color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
         .pix-copy-area input { width: calc(100% - 22px); padding: 10px; }
         .pix-copy-area button { background-color: #000080; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; margin-top: 5px; }
-
-        .section { background: #fff; padding: 25px; margin-top: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
-        h2 { border-bottom: 2px solid #000080; padding-bottom: 10px; color: #000080; font-size: 1.5em; }
-        .sponsor-section { background-color: #00005a; color: white; padding: 30px; margin-top: 20px; border-radius: 8px; text-align: center; }
+        .sponsor-section { clear: both; background-color: #00005a; color: white; padding: 30px; margin-top: 20px; border-radius: 8px; text-align: center; }
         .sponsor-section h2 { color: #FFC107; border-bottom-color: #FFC107; }
         .sponsor-form input, .sponsor-form button { width: calc(100% - 24px); padding: 12px; margin-top: 10px; border-radius: 5px; border: none; font-size: 1em; }
         .sponsor-form button { background-color: #FFC107; color: #000080; font-weight: bold; }
@@ -54,13 +53,38 @@
                 <img src="qrcode.png" alt="QR Code PIX">
                 <p><strong>DOE</strong></p>
             </div>
-            
+
             <div class="section">
                 <h2>Como Funciona o Programa</h2>
-                <p>O <strong>Programa Estadual de Incentivo ao Esporte (FazAtleta)</strong> do Governo da Bahia utiliza o <strong>abatimento no ICMS</strong> para empresas que patrocinam atletas e eventos.</p>
+                <p>O <strong>Programa Estadual de Incentivo ao Esporte (FazAtleta)</strong> do Governo da Bahia utiliza o <strong>abatimento no ICMS</strong> para empresas que patrocinam atletas e eventos. As empresas podem obter <strong>até 80% do valor investido como desconto no imposto</strong>, sendo os 20% restantes o investimento direto.</p>
+            </div>
+
+            <div class="section">
+                <h2>Investimentos e Orçamento 2025</h2>
+                <p>Para 2025, o programa disponibiliza <strong>R$ 10 milhões</strong> em isenções fiscais. A verba é dividida com 70% para atletas individuais e 30% para eventos e projetos sociais.</p>
+            </div>
+            
+            <div class="section columns">
+                <div>
+                    <h3>Benefícios para Atletas</h3>
+                    <ul>
+                        <li>Bolsa-auxílio mensal</li>
+                        <li>Custeio de viagens e competições</li>
+                        <li>Aquisição de material esportivo</li>
+                        <li>Remuneração para técnicos</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Benefícios para Empresas</h3>
+                    <ul>
+                        <li><strong>Até 80% de abatimento no ICMS</strong></li>
+                        <li>Marketing esportivo e visibilidade da marca</li>
+                        <li>Fortalecimento da responsabilidade social</li>
+                    </ul>
+                </div>
             </div>
         </div>
-
+        
         <div class="section sponsor-section">
             <h2>QUERO PATROCINAR</h2>
             <form action="mailto:paulo@ctb-ba.com.br" method="post" enctype="text/plain" class="sponsor-form">
@@ -101,7 +125,6 @@
         btn.onclick = function() { modal.style.display = "block"; }
         span.onclick = function() { modal.style.display = "none"; }
         window.onclick = function(event) { if (event.target == modal) { modal.style.display = "none"; } }
-
         document.getElementById("copy-button").addEventListener("click", function() {
             var copyText = document.getElementById("pix-code");
             copyText.select();
