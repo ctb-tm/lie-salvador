@@ -56,6 +56,36 @@
         ol {
             padding-left: 20px;
         }
+        
+        /* Estilos da nova seção de projetos */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .project-link {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background-color: #f0f4f8;
+            border-left: 5px solid #000080;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #000080;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .project-link:hover {
+            background-color: #e2eafc;
+            transform: translateY(-3px);
+            border-left-color: #FFC107;
+        }
+        .project-link .icon {
+            font-size: 1.5em;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
@@ -73,13 +103,9 @@
             color: white;
             font-size: 1.1em;
         }
-        /* Cores alternadas para as linhas */
-        tr:nth-child(even) {
-            background-color: #E6E6FA; /* Azul 10% (Lilás bem claro) */
-        }
-        tr:nth-child(odd) {
-            background-color: #CCCCFF; /* Azul 20% (Lilás um pouco mais forte) */
-        }
+        tr:nth-child(even) { background-color: #E6E6FA; } /* Azul 10% */
+        tr:nth-child(odd) { background-color: #CCCCFF; } /* Azul 20% */
+
         .highlight {
             font-size: 0.9em;
             font-style: italic;
@@ -152,22 +178,43 @@
 
         <div class="section">
             <h2>O que é o Programa VIVA ESPORTE?</h2>
-            <p>A Prefeitura de Salvador, através do <strong>Decreto Nº 37.766/2023</strong> e da <strong>Lei Municipal nº 9.738/2023</strong>, criou o "Programa de Incentivo ao Esporte - VIVA ESPORTE". Este programa é uma poderosa ferramenta que permite a empresas que pagam o Imposto Sobre Serviços (ISS) em Salvador direcionarem parte desse imposto para financiar diretamente projetos esportivos, como o desenvolvimento de atletas locais.</p>
+            <p>A Prefeitura de Salvador, através do <strong>Decreto Nº 37.766/2023</strong> e da <strong>Lei Municipal nº 9.738/2023</strong>, criou o "Programa de Incentivo ao Esporte - VIVA ESPORTE". Este programa é uma poderosa ferramenta que permite a empresas que pagam o Imposto Sobre Serviços (ISS) em Salvador direcionarem parte desse imposto para financiar diretamente projetos esportivos.</p>
         </div>
 
         <div class="section">
-            <h2>Como Funciona o Processo?</h2>
-            <ol>
-                <li><strong>Aprovação do Projeto:</strong> Atletas e entidades submetem seus projetos, que são rigorosamente avaliados e aprovados pela prefeitura.</li>
-                <li><strong>Busca por Patrocinadores:</strong> Com o projeto aprovado, o proponente busca empresas interessadas em associar sua marca ao esporte.</li>
-                <li><strong>Investimento Direto:</strong> A empresa patrocinadora deposita o valor do patrocínio diretamente na conta do projeto.</li>
-                <li><strong>Abatimento Fiscal:</strong> A empresa recebe o abatimento do valor investido no ISS que tem a pagar, tornando o apoio praticamente a custo zero.</li>
-            </ol>
+            <h2>Projetos Aprovados para Captação</h2>
+            <p>Conheça alguns dos projetos que já foram aprovados e estão aptos a receber patrocínio através da lei de incentivo. Clique para saber mais sobre cada oportunidade.</p>
+            <div class="project-grid">
+                <a href="#" class="project-link">
+                    <span class="icon">🏆</span>
+                    <span>Nome do Projeto 1</span>
+                </a>
+                <a href="#" class="project-link">
+                    <span class="icon">🏆</span>
+                    <span>Nome do Projeto 2</span>
+                </a>
+                <a href="#" class="project-link">
+                    <span class="icon">🏆</span>
+                    <span>Nome do Projeto 3</span>
+                </a>
+                <a href="#" class="project-link">
+                    <span class="icon">🏆</span>
+                    <span>Nome do Projeto 4</span>
+                </a>
+                <a href="#" class="project-link">
+                    <span class="icon">🏆</span>
+                    <span>Nome do Projeto 5</span>
+                </a>
+                <a href="#" class="project-link">
+                    <span class="icon">🏆</span>
+                    <span>Nome do Projeto 6</span>
+                </a>
+            </div>
         </div>
-
+        
         <div class="section">
             <h2>Simulação de Incentivo Fiscal via ISS</h2>
-            <p>A lei permite que empresas destinem <strong>até 20% do valor anual do ISS</strong> devido para apoiar projetos. Veja na tabela abaixo como o potencial de investimento aumenta conforme o valor do imposto pago pela empresa.</p>
+            <p>A lei permite que empresas destinem <strong>até 20% do valor anual do ISS</strong> devido. Veja na tabela como o potencial de investimento aumenta conforme o valor do imposto pago.</p>
             <table>
                 <thead>
                     <tr>
