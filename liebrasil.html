@@ -13,21 +13,29 @@
         nav { text-align: center; margin-top: 20px; background-color: #fff; padding: 10px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);}
         nav a { text-decoration: none; color: #000080; padding: 10px 20px; margin: 0 5px; border-radius: 5px; font-weight: bold; transition: background-color 0.3s; }
         nav a:hover, nav a.active { background-color: #FFC107; color: #000080; }
-
+        .main-content { overflow: auto; }
         .donate-box { background-color: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 10px; width: 120px; text-align: center; float: right; margin-top: 20px; margin-left: 20px; cursor: pointer; }
         .donate-box img { width: 100px; height: 100px; }
         .donate-box p { font-weight: bold; color: #000080; margin: 5px 0 0 0; }
-        .main-content { overflow: auto; }
-
+        .section { background: #fff; padding: 25px; margin-top: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
+        h2 { border-bottom: 2px solid #000080; padding-bottom: 10px; color: #000080; font-size: 1.5em; }
+        .columns { display: flex; flex-wrap: wrap; gap: 20px; text-align: justify; }
+        .columns > div { flex: 1; min-width: 300px; background-color: #f0f8ff; padding: 20px; border-left: 5px solid #000080; border-radius: 5px;}
+        .projetos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(500px,1fr));gap:30px;margin-top:20px;}
+        .projeto-card{background:white;border-radius:15px;padding:30px;box-shadow:0 8px 24px rgba(0,0,0,0.1);border-left:6px solid #257F39;transition:transform 0.3s ease,box-shadow 0.3s ease;}
+        .projeto-card:hover{transform:translateY(-5px);box-shadow:0 12px 32px rgba(0,0,0,0.15);}
+        .projeto-header{display:flex;align-items:center;margin-bottom:20px;border-bottom:2px solid #F0F8FF;padding-bottom:15px;}
+        .icone-esporte{font-size:3em;margin-right:20px;}
+        .nome-projeto{font-size:1.4em;font-weight:bold;color:#0F346B;}
+        .valor-container{display:flex;justify-content:space-between;align-items:center;background:#F8FCFF;padding:15px;border-radius:10px;border:2px solid #E0F4E0;}
+        .valor{font-size:1.8em;font-weight:bold;color:#257F39;}
+        .numero-projeto{background:#0F346B;color:white;padding:8px 15px;border-radius:25px;font-size:0.9em;font-weight:bold;}
         .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.6); }
         .modal-content { background-color: #fefefe; margin: 10% auto; padding: 20px; border: 1px solid #888; width: 90%; max-width: 350px; text-align: center; border-radius: 10px; }
         .close-button { color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
         .pix-copy-area input { width: calc(100% - 22px); padding: 10px; }
         .pix-copy-area button { background-color: #000080; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; margin-top: 5px; }
-
-        .section { background: #fff; padding: 25px; margin-top: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
-        h2 { border-bottom: 2px solid #000080; padding-bottom: 10px; color: #000080; font-size: 1.5em; }
-        .sponsor-section { background-color: #00005a; color: white; padding: 30px; margin-top: 20px; border-radius: 8px; text-align: center; }
+        .sponsor-section { clear: both; background-color: #00005a; color: white; padding: 30px; margin-top: 20px; border-radius: 8px; text-align: center; }
         .sponsor-section h2 { color: #FFC107; border-bottom-color: #FFC107; }
         .sponsor-form input, .sponsor-form button { width: calc(100% - 24px); padding: 12px; margin-top: 10px; border-radius: 5px; border: none; font-size: 1em; }
         .sponsor-form button { background-color: #FFC107; color: #000080; font-weight: bold; }
@@ -57,7 +65,30 @@
 
             <div class="section">
                 <h2>Como Funciona o Incentivo (via Imposto de Renda)</h2>
+                <div class="columns">
+                    <div>
+                        <h3>Para Pessoas Físicas (IRPF)</h3>
+                        <p>Qualquer cidadão que faz a declaração completa do Imposto de Renda pode patrocinar um projeto e deduzir <strong>até 7% do imposto devido</strong>. O valor investido é abatido diretamente, fazendo com que o patrocínio tenha um custo real muito baixo ou zero.</p>
+                    </div>
+                    <div>
+                        <h3>Para Pessoas Jurídicas (IRPJ)</h3>
+                        <p>Empresas tributadas com base no <strong>Lucro Real</strong> podem deduzir <strong>até 2% do imposto devido</strong>. O valor do patrocínio é lançado como despesa operacional e, ao mesmo tempo, abatido do IRPJ, representando um grande benefício fiscal e de marketing.</p>
+                    </div>
                 </div>
+            </div>
+
+            <div class="section">
+                <h2>Projetos Aprovados para Captação (Federal)</h2>
+                <div class="projetos-grid">
+                    <div class="projeto-card"><div class="projeto-header"><div class="icone-esporte">🏓</div><div class="projeto-info"><div class="nome-projeto">Estudar em Barrocos com Tênis de Mesa</div></div></div><div class="valor-container"><div class="valor">R$ 446.141,44</div><div class="numero-projeto">Projeto 2401311</div></div></div>
+                    <div class="projeto-card"><div class="projeto-header"><div class="icone-esporte">🏓</div><div class="projeto-info"><div class="nome-projeto">Estudar em Simões Filho com Tênis de Mesa</div></div></div><div class="valor-container"><div class="valor">R$ 446.141,44</div><div class="numero-projeto">Projeto 2401343</div></div></div>
+                    <div class="projeto-card"><div class="projeto-header"><div class="icone-esporte">🏓</div><div class="projeto-info"><div class="nome-projeto">Estudar em Teofilândia com Tênis de Mesa</div></div></div><div class="valor-container"><div class="valor">R$ 446.141,44</div><div class="numero-projeto">Projeto 2401345</div></div></div>
+                    <div class="projeto-card"><div class="projeto-header"><div class="icone-esporte">🏓</div><div class="projeto-info"><div class="nome-projeto">EDUCAR COM TÊNIS DE MESA ANO 3</div></div></div><div class="valor-container"><div class="valor">R$ 707.312,56</div><div class="numero-projeto">Projeto 2403761</div></div></div>
+                    <div class="projeto-card"><div class="projeto-header"><div class="icone-esporte">🎾</div><div class="projeto-info"><div class="nome-projeto">Oficinas Educacionais de Tênis em Salvador BA Ano 2</div></div></div><div class="valor-container"><div class="valor">R$ 1.422.834,56</div><div class="numero-projeto">Projeto 2501117</div></div></div>
+                    <div class="projeto-card"><div class="projeto-header"><div class="icone-esporte">🏆</div><div class="projeto-info"><div class="nome-projeto">FESTIVAL DE ESPORTES DA BAHIA</div></div></div><div class="valor-container"><div class="valor">R$ 940.459,52</div><div class="numero-projeto">Projeto 2501213</div></div></div>
+                    <div class="projeto-card"><div class="projeto-header"><div class="icone-esporte">🏓</div><div class="projeto-info"><div class="nome-projeto">Oficinas Educacionais de Tênis de Mesa na Bahia – Ano 2</div></div></div><div class="valor-container"><div class="valor">R$ 1.420.619,43</div><div class="numero-projeto">Projeto 2502377</div></div></div>
+                </div>
+            </div>
         </div>
 
         <div class="section sponsor-section">
@@ -100,7 +131,6 @@
         btn.onclick = function() { modal.style.display = "block"; }
         span.onclick = function() { modal.style.display = "none"; }
         window.onclick = function(event) { if (event.target == modal) { modal.style.display = "none"; } }
-
         document.getElementById("copy-button").addEventListener("click", function() {
             var copyText = document.getElementById("pix-code");
             copyText.select();
