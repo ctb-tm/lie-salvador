@@ -41,6 +41,28 @@
         .sponsor-form button { background-color: #FFC107; color: #000080; font-weight: bold; }
         footer { clear: both; display: flex; align-items: center; gap: 15px; padding: 20px; background: #fff; color: #000080; margin-top: 20px; border-radius: 8px; }
         .footer-logo { height: 50px; }
+
+        /* NOVAS CLASSES ADICIONADAS AQUI */
+        .projeto-identificacao {
+            display: flex;
+            align-items: center;
+        }
+
+        .botao-abrir {
+            background-color: #e53935; /* Cor vermelha para o botão */
+            color: white; /* Cor do texto */
+            padding: 8px 15px; /* Espaçamento interno */
+            border-radius: 25px; /* Bordas arredondadas */
+            font-size: 0.9em;
+            font-weight: bold;
+            text-decoration: none; /* Remove o sublinhado do link */
+            margin-right: 10px; /* Espaço entre o botão e o número do projeto */
+            transition: background-color 0.3s; /* Efeito suave ao passar o mouse */
+        }
+
+        .botao-abrir:hover {
+            background-color: #c62828; /* Cor do botão um pouco mais escura ao passar o mouse */
+        }
     </style>
 </head>
 <body>
@@ -85,7 +107,23 @@
                     <div class="projeto-card"><div class="projeto-header"><div class="icone-esporte">🏓</div><div class="projeto-info"><div class="nome-projeto">Estudar em Teofilândia com Tênis de Mesa</div></div></div><div class="valor-container"><div class="valor">R$ 446.141,44</div><div class="numero-projeto">Projeto 2401345</div></div></div>
                     <div class="projeto-card"><div class="projeto-header"><div class="icone-esporte">🏓</div><div class="projeto-info"><div class="nome-projeto">EDUCAR COM TÊNIS DE MESA ANO 3</div></div></div><div class="valor-container"><div class="valor">R$ 707.312,56</div><div class="numero-projeto">Projeto 2403761</div></div></div>
                     <div class="projeto-card"><div class="projeto-header"><div class="icone-esporte">🎾</div><div class="projeto-info"><div class="nome-projeto">Oficinas Educacionais de Tênis em Salvador BA Ano 2</div></div></div><div class="valor-container"><div class="valor">R$ 1.422.834,56</div><div class="numero-projeto">Projeto 2501117</div></div></div>
-                    <div class="projeto-card"><div class="projeto-header"><div class="icone-esporte">🏆</div><div class="projeto-info"><div class="nome-projeto">FESTIVAL DE ESPORTES DA BAHIA</div></div></div><div class="valor-container"><div class="valor">R$ 940.459,52</div><div class="numero-projeto">Projeto 2501213</div></div></div>
+                    
+                    <div class="projeto-card">
+                        <div class="projeto-header">
+                            <div class="icone-esporte">🏆</div>
+                            <div class="projeto-info">
+                                <div class="nome-projeto">FESTIVAL DE ESPORTES DA BAHIA</div>
+                            </div>
+                        </div>
+                        <div class="valor-container">
+                            <div class="valor">R$ 940.459,52</div>
+                            <div class="projeto-identificacao">
+                                <a href="https://pfeira.github.io/ctb-festival-esporte-bahia/" target="_blank" class="botao-abrir">abrir</a>
+                                <div class="numero-projeto">Projeto 2501213</div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="projeto-card"><div class="projeto-header"><div class="icone-esporte">🏓</div><div class="projeto-info"><div class="nome-projeto">Oficinas Educacionais de Tênis de Mesa na Bahia – Ano 2</div></div></div><div class="valor-container"><div class="valor">R$ 1.420.619,43</div><div class="numero-projeto">Projeto 2502377</div></div></div>
                 </div>
             </div>
