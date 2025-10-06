@@ -4,34 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Incentivo Bahia (ICMS) - CTB</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f0f4f8; }
-        .container { max-width: 1000px; margin: auto; }
-        header { background: #fff; padding: 15px 20px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-radius: 8px; }
-        .header-logo { height: 70px; }
-        header h1 { margin: 0; font-size: 1.6em; color: #000080; text-align: center; }
-        nav { text-align: center; margin-top: 20px; background-color: #fff; padding: 10px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);}
-        nav a { text-decoration: none; color: #000080; padding: 10px 20px; margin: 0 5px; border-radius: 5px; font-weight: bold; transition: background-color 0.3s; }
-        nav a:hover, nav a.active { background-color: #FFC107; color: #000080; }
-        .main-content { overflow: auto; }
-        .donate-box { background-color: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 10px; width: 120px; text-align: center; float: right; margin-top: 20px; margin-left: 20px; cursor: pointer; }
-        .donate-box img { width: 100px; height: 100px; }
-        .donate-box p { font-weight: bold; color: #000080; margin: 5px 0 0 0; }
-        .section { background: #fff; padding: 25px; margin-top: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
-        h2 { border-bottom: 2px solid #000080; padding-bottom: 10px; color: #000080; font-size: 1.5em; }
-        .columns { display: flex; flex-wrap: wrap; gap: 20px; }
-        .columns > div { flex: 1; min-width: 300px; }
-        .highlight-box { background-color: #e6e6fa; border-left: 5px solid #000080; padding: 15px; margin: 20px 0; border-radius: 5px; }
-        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.6); }
-        .modal-content { background-color: #fefefe; margin: 10% auto; padding: 20px; border: 1px solid #888; width: 90%; max-width: 350px; text-align: center; border-radius: 10px; }
-        .close-button { color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
-        .pix-copy-area input { width: calc(100% - 22px); padding: 10px; }
-        .pix-copy-area button { background-color: #000080; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; margin-top: 5px; }
-        .sponsor-section { clear: both; background-color: #00005a; color: white; padding: 30px; margin-top: 20px; border-radius: 8px; text-align: center; }
-        .sponsor-section h2 { color: #FFC107; border-bottom-color: #FFC107; }
-        .sponsor-form input, .sponsor-form button { width: calc(100% - 24px); padding: 12px; margin-top: 10px; border-radius: 5px; border: none; font-size: 1em; }
-        .sponsor-form button { background-color: #FFC107; color: #000080; font-weight: bold; }
-        footer { clear: both; display: flex; align-items: center; gap: 15px; padding: 20px; background: #fff; color: #000080; margin-top: 20px; border-radius: 8px; }
+        :root {
+            --primary-blue: #19305A;
+            --accent-green-dark: #2BA02D;
+            --accent-green-light: #C3FE4D;
+            --background-light: #f7f9fc;
+            --text-light: #ffffff;
+            --text-dark: #333333;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: var(--background-light);
+            color: var(--text-dark);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        header {
+            background: var(--text-light);
+            padding: 20px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-radius: 16px;
+        }
+
+        .header-logo {
+            height: 70px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+            font-family: 'Montserrat ExtraBold', sans-serif;
+            color: var(--primary-blue);
+            text-align: center;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 20px;
+            background-color: var(--text-light);
+            padding: 10px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-blue);
+            padding: 12px 22px;
+            margin: 0 5px;
+            border-radius: 12px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: var(--accent-green-light);
+            color: var(--primary-blue);
+            transform: translateY(-2px);
+        }
+        
+        .section {
+            background: var(--text-light);
+            padding: 30px;
+            margin-top: 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            min-height: 300px;
+        }
+        
+        h2 {
+            font-family: 'Montserrat ExtraBold', sans-serif;
+            border-bottom: 3px solid var(--accent-green-dark);
+            padding-bottom: 10px;
+            color: var(--primary-blue);
+            font-size: 1.6em;
+        }
+        
+        footer {
+            clear: both;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            background: var(--text-light);
+            color: var(--primary-blue);
+            margin-top: 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
         .footer-logo { height: 50px; }
     </style>
 </head>
@@ -39,8 +113,8 @@
     <div class="container">
         <header>
             <img src="ctb.png" alt="Logo CTB" class="header-logo">
-            <h1>FAZ ATLETA BAHIA</h1>
-            <img src="fazatleta.png" alt="Logo FazAtleta" class="header-logo">
+            <h1>LEI DE INCENTIVO BAHIA</h1>
+            <img src="viva.png" alt="Logo Viva Esporte" class="header-logo">
         </header>
 
         <nav>
@@ -48,61 +122,10 @@
             <a href="fazatleta.html" class="active">BAHIA (ICMS)</a>
             <a href="liebrasil.html">FEDERAL (IR)</a>
         </nav>
-
-        <div class="main-content">
-            <div id="donate-box" class="donate-box">
-                <img src="qrcode.png" alt="QR Code PIX">
-                <p><strong>DOE</strong></p>
-            </div>
-
-            <div class="section">
-                <h2>Como Funciona o Programa</h2>
-                <p>O <strong>Programa Estadual de Incentivo ao Esporte (FazAtleta)</strong> do Governo da Bahia utiliza o <strong>abatimento no ICMS</strong> para empresas que patrocinam atletas e eventos. As empresas podem obter <strong>até 80% do valor investido como desconto no imposto</strong>, sendo os 20% restantes o investimento direto.</p>
-            </div>
-
-            <div class="section">
-                <h2>Investimentos e Orçamento 2025</h2>
-                <p>Para 2025, o programa disponibiliza <strong>R$ 10 milhões</strong> em isenções fiscais. A verba é dividida com 70% para atletas individuais e 30% para eventos e projetos sociais. Desde 2021, já beneficiou <strong>622 atletas e 88 eventos</strong>.</p>
-            </div>
-            
-            <div class="section">
-                <h2>Prazos e Contato (Ciclo 2025)</h2>
-                 <div class="highlight-box">
-                    <p><strong>Inscrições:</strong> Abertas, em fluxo contínuo, até <strong>1º de dezembro de 2025</strong> (ou até esgotar os recursos).</p>
-                    <p><strong>E-mail para envio de projetos:</strong> projetos.fazatleta@setre.ba.gov.br</p>
-                </div>
-            </div>
-
-            <div class="section columns">
-                <div>
-                    <h3>Benefícios para Atletas</h3>
-                    <ul>
-                        <li>Bolsa-auxílio mensal</li>
-                        <li>Custeio de viagens e competições</li>
-                        <li>Aquisição de material esportivo</li>
-                        <li>Remuneração para técnicos</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Benefícios para Empresas</h3>
-                    <ul>
-                        <li><strong>Até 80% de abatimento no ICMS</strong></li>
-                        <li>Marketing esportivo e visibilidade da marca</li>
-                        <li>Fortalecimento da responsabilidade social</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
         
-        <div class="section sponsor-section">
-            <h2>QUERO PATROCINAR COM ICMS</h2>
-            <form action="mailto:paulo@ctb-ba.com.br" method="post" enctype="text/plain" class="sponsor-form">
-                <input type="text" name="Interesse em (Bahia)" placeholder="NOME DA EMPRESA" required>
-                <input type="text" name="CNPJ" placeholder="CNPJ" required>
-                <input type="email" name="E-mail" placeholder="E-MAIL" required>
-                <input type="text" name="Whatsapp" placeholder="WHATSAPP" required>
-                <button type="submit">ENVIAR INTERESSE</button>
-            </form>
+        <div class="section">
+            <h2>Projetos Aptos (FazAtleta - ICMS)</h2>
+            <p>Em breve, informações sobre os projetos aptos a receberem patrocínio via FazAtleta (ICMS Bahia).</p>
         </div>
 
         <footer>
@@ -111,35 +134,5 @@
             Paulo Carneiro - paulo@ctb.com.br - 71-98530-4903</p>
         </footer>
     </div>
-
-    <div id="pix-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h3>Doação para o Projeto</h3>
-            <p><strong>Beneficiário:</strong> Clube dos Tenistas da Bahia</p>
-            <p><strong>CNPJ:</strong> 23.146.328/0001-16</p>
-            <img src="qrcode.png" alt="QR Code PIX">
-            <div class="pix-copy-area">
-                <p><strong>PIX Copia e Cola:</strong></p>
-                <input type="text" value="SEU_CODIGO_PIX_COPIA_E_COLA_VAI_AQUI" id="pix-code" readonly>
-                <button id="copy-button">Copiar Código</button>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        var modal = document.getElementById("pix-modal");
-        var btn = document.getElementById("donate-box");
-        var span = document.getElementsByClassName("close-button")[0];
-        btn.onclick = function() { modal.style.display = "block"; }
-        span.onclick = function() { modal.style.display = "none"; }
-        window.onclick = function(event) { if (event.target == modal) { modal.style.display = "none"; } }
-        document.getElementById("copy-button").addEventListener("click", function() {
-            var copyText = document.getElementById("pix-code");
-            copyText.select();
-            document.execCommand("copy");
-            alert("Código PIX copiado!");
-        });
-    </script>
 </body>
 </html>
