@@ -103,6 +103,41 @@
         .info-box h2 { border-bottom: none; padding-bottom: 0; margin-top: 0; }
         .info-box p, .info-box li { line-height: 1.6; }
         
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .project-link {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            background-color: #f8fafc;
+            border-left: 5px solid var(--accent-green-dark);
+            border-radius: 10px;
+            text-decoration: none;
+            color: var(--primary-blue);
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+
+        .project-link:hover {
+            background-color: #ffffff;
+            transform: translateY(-5px);
+            border-left-color: var(--accent-green-light);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.07);
+        }
+
+        .project-link .icon {
+            width: 32px;
+            height: 32px;
+            color: var(--primary-blue);
+        }
+
         footer {
             clear: both;
             display: flex;
@@ -123,7 +158,7 @@
         <header>
             <img src="ctb.png" alt="Logo CTB" class="header-logo">
             <h1>LEI DE INCENTIVO BAHIA</h1>
-            <img src="viva.png" alt="Logo Viva Esporte" class="header-logo">
+            <img src="fazatleta.png" alt="Logo FazAtleta" class="header-logo">
         </header>
 
         <nav>
@@ -134,13 +169,27 @@
         
         <div class="info-box">
             <h2>O que é o Programa FazAtleta?</h2>
-            <p>O FazAtleta é o programa de incentivo ao esporte do Governo do Estado da Bahia. Ele funciona através da concessão de abatimento no Imposto sobre Circulação de Mercadorias e Serviços (ICMS) a empresas que apoiam financeiramente projetos esportivos aprovados pela Comissão Gerenciadora do Programa.</p>
-            <p>Para a empresa patrocinadora, o investimento é deduzido do ICMS a recolher, tornando o apoio uma poderosa ferramenta de marketing com custo reduzido.</p>
+            <p>O FazAtleta é o programa de incentivo ao esporte do Governo do Estado da Bahia, executado pela Secretaria do Trabalho, Emprego, Renda e Esporte (Setre) e pela Secretaria da Fazenda (Sefaz). Ele concede abatimento de até 80% no Imposto sobre Circulação de Mercadorias e Serviços (ICMS) para empresas que apoiam financeiramente projetos esportivos aprovados pela comissão gerenciadora do programa.</p>
+        </div>
+
+        <div class="info-box">
+            <h2>Como Funciona?</h2>
+            <ol>
+                <li><strong>Proposta do Projeto:</strong> Atletas, equipes ou entidades esportivas submetem seus projetos para análise pela Comissão Gerenciadora do FazAtleta.</li>
+                <li><strong>Captação de Recursos:</strong> Uma vez aprovado, o proponente está apto a captar recursos junto a empresas contribuintes de ICMS na Bahia.</li>
+                <li><strong>Aporte do Patrocinador:</strong> A empresa patrocinadora deposita o valor do patrocínio na conta do proponente.</li>
+                <li><strong>Abatimento Fiscal:</strong> A empresa recebe o abatimento fiscal do valor incentivado diretamente no seu ICMS a recolher, tornando o apoio ao esporte uma ação de baixo custo e alto impacto social e de marketing.</li>
+            </ol>
         </div>
 
         <div class="section">
             <h2>Projetos Aptos (FazAtleta - ICMS)</h2>
-            <p>Nenhum projeto apto para esta modalidade no momento. Consulte novamente em breve.</p>
+            <div class="project-grid">
+                <a href="https://ctb-tm.github.io/handysolar-open-tennis/" class="project-link" target="_blank">
+                     <svg class="icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M13.75 6.04013C15.83 6.33013 16.58 8.65013 15.22 10.0101C14.42 10.8101 13.31 11.1901 12.25 11.1901C10.17 11.4801 9.42 9.16013 10.78 7.80013C11.58 7.00013 12.69 6.62013 13.75 6.62013M13.75 5.04013C12.39 5.04013 11.03 5.59013 10 6.62013C8.2 8.42013 9.22 11.5101 12.25 12.1901C13.61 12.1901 14.97 11.6401 16 10.6101C17.8 8.81013 16.78 5.72013 13.75 5.04013Z M12.81 12.8801L7.53 18.1601C7.14 18.5501 7.14 19.1801 7.53 19.5701C7.92 19.9601 8.55 19.9601 8.94 19.5701L14.22 14.2901C14.5055 14.0163 14.6865 13.6559 14.73 13.2701L15.3 8.35013L13.88 8.18013L13.31 13.1001C13.2687 13.4542 13.0903 13.7845 12.81 14.0401L12.81 12.8801Z" /></svg>
+                    <span>TÊNIS</span>
+                </a>
+            </div>
         </div>
 
         <footer>
