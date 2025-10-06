@@ -4,46 +4,240 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Incentivo Salvador (ISS) - CTB</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f0f4f8; }
-        .container { max-width: 1000px; margin: auto; }
-        header { background: #fff; padding: 15px 20px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-radius: 8px; }
-        .header-logo { height: 70px; }
-        header h1 { margin: 0; font-size: 1.6em; color: #000080; text-align: center; }
-        nav { text-align: center; margin-top: 20px; background-color: #fff; padding: 10px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);}
-        nav a { text-decoration: none; color: #000080; padding: 10px 20px; margin: 0 5px; border-radius: 5px; font-weight: bold; transition: background-color 0.3s; }
-        nav a:hover, nav a.active { background-color: #FFC107; color: #000080; }
-        .main-content { overflow: auto; /* Limpa o float do box de doação */ }
-        .donate-box { background-color: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 10px; width: 120px; text-align: center; float: right; margin-top: 20px; margin-left: 20px; cursor: pointer; }
+        :root {
+            --primary-blue: #19305A; /*  */
+            --accent-green-dark: #2BA02D; /*  */
+            --accent-green-light: #C3FE4D; /*  */
+            --background-light: #f7f9fc;
+            --text-light: #ffffff;
+            --text-dark: #333333;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif; /* [cite: 3] */
+            margin: 0;
+            padding: 20px;
+            background-color: var(--background-light);
+            color: var(--text-dark);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        header {
+            background: var(--text-light);
+            padding: 20px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-radius: 16px;
+        }
+
+        .header-logo {
+            height: 70px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+            font-family: 'Montserrat ExtraBold', sans-serif; /*  */
+            color: var(--primary-blue);
+            text-align: center;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 20px;
+            background-color: var(--text-light);
+            padding: 10px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-blue);
+            padding: 12px 22px;
+            margin: 0 5px;
+            border-radius: 12px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: var(--accent-green-light);
+            color: var(--primary-blue);
+            transform: translateY(-2px);
+        }
+
+        .main-content {
+            overflow: auto;
+        }
+
+        .donate-box {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            padding: 10px;
+            width: 120px;
+            text-align: center;
+            float: right;
+            margin-top: 20px;
+            margin-left: 20px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .donate-box:hover {
+            transform: scale(1.05);
+        }
         .donate-box img { width: 100px; height: 100px; }
-        .donate-box p { font-weight: bold; color: #000080; margin: 5px 0 0 0; }
-        .section { background: #fff; padding: 25px; margin-top: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
-        h2 { border-bottom: 2px solid #000080; padding-bottom: 10px; color: #000080; font-size: 1.5em; }
-        .info-box { background-color: #f0f8ff; border-left: 5px solid #000080; padding: 20px; margin-top: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.05); }
+        .donate-box p { font-weight: bold; color: var(--primary-blue); margin: 5px 0 0 0; }
+
+        .section {
+            background: var(--text-light);
+            padding: 30px;
+            margin-top: 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            font-family: 'Montserrat ExtraBold', sans-serif; /*  */
+            border-bottom: 3px solid var(--accent-green-dark);
+            padding-bottom: 10px;
+            color: var(--primary-blue);
+            font-size: 1.6em;
+        }
+
+        .info-box {
+            background-color: #ffffff;
+            border-left: 6px solid var(--accent-green-dark);
+            padding: 25px;
+            margin-top: 20px;
+            border-radius: 12px;
+        }
         .info-box h2 { border-bottom: none; padding-bottom: 0; margin-top: 0; }
-        .highlight-projects { background-color: #fff9e6; border: 2px solid #FFC107; padding: 25px; margin-top: 20px; border-radius: 8px; }
-        .highlight-projects h2 { color: #000080; border-bottom-color: #FFC107; }
-        .highlight-projects h2::before { content: '🏆 '; margin-right: 10px; }
-        .aviso-projetos { background-color: #e6f0ff; border: 1px solid #000080; color: #000080; padding: 15px; margin-top: 20px; margin-bottom: 20px; border-radius: 8px; text-align: center; font-size: 1.1em; }
-        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-top: 20px; }
-        .project-link { display: flex; align-items: center; gap: 15px; padding: 15px; background-color: #fff; border-left: 5px solid #000080; border-radius: 5px; text-decoration: none; color: #000080; font-weight: bold; transition: background-color 0.3s, transform 0.3s; }
-        .project-link:hover { background-color: #e2eafc; transform: translateY(-3px); border-left-color: #FFC107; }
-        .project-link .icon { font-size: 1.5em; }
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        th, td { padding: 12px; border: 1px solid #c8d4e3; text-align: left; color: #000080; }
-        th { background-color: #000080; color: white; }
-        tr:nth-child(even) { background-color: #E6E6FA; }
-        tr:nth-child(odd) { background-color: #CCCCFF; }
-        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.6); }
-        .modal-content { background-color: #fefefe; margin: 10% auto; padding: 20px; border: 1px solid #888; width: 90%; max-width: 350px; text-align: center; border-radius: 10px; }
+        .info-box p, .info-box li { line-height: 1.6; }
+
+        .highlight-projects {
+            background-color: #f0fdf4; 
+            border: 2px solid var(--accent-green-dark);
+        }
+        .highlight-projects h2 { border-bottom-color: var(--accent-green-light); }
+
+        .aviso-projetos {
+            background-color: #e0f2fe;
+            border: 1px solid var(--primary-blue);
+            color: var(--primary-blue);
+            padding: 15px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.1em;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .project-link {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            background-color: #f8fafc;
+            border-left: 5px solid var(--accent-green-dark);
+            border-radius: 10px;
+            text-decoration: none;
+            color: var(--primary-blue);
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+
+        .project-link:hover {
+            background-color: #ffffff;
+            transform: translateY(-5px);
+            border-left-color: var(--accent-green-light);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.07);
+        }
+
+        .project-link .icon {
+            width: 32px;
+            height: 32px;
+            color: var(--primary-blue);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 0.95em;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #e2e8f0;
+            text-align: left;
+            color: var(--primary-blue);
+        }
+
+        th {
+            background-color: var(--primary-blue);
+            color: var(--text-light);
+            font-family: 'Montserrat ExtraBold', sans-serif; /*  */
+        }
+
+        tr:nth-child(even) { background-color: #f8fafc; }
+        tr:hover { background-color: #f1f5f9; }
+
+        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.7); }
+        .modal-content { background-color: #fefefe; margin: 10% auto; padding: 25px; border: 1px solid #888; width: 90%; max-width: 350px; text-align: center; border-radius: 16px; }
         .close-button { color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
-        .pix-copy-area input { width: calc(100% - 22px); padding: 10px; }
-        .pix-copy-area button { background-color: #000080; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; margin-top: 5px; }
-        .sponsor-section { clear: both; background-color: #00005a; color: white; padding: 30px; margin-top: 20px; border-radius: 8px; text-align: center; }
-        .sponsor-section h2 { color: #FFC107; border-bottom-color: #FFC107; }
-        .sponsor-form input, .sponsor-form button { width: calc(100% - 24px); padding: 12px; margin-top: 10px; border-radius: 5px; border: none; font-size: 1em; }
-        .sponsor-form button { background-color: #FFC107; color: #000080; font-weight: bold; cursor: pointer; }
-        footer { clear: both; display: flex; align-items: center; gap: 15px; padding: 20px; background: #fff; color: #000080; margin-top: 20px; border-radius: 8px; }
+
+        .pix-copy-area input { width: calc(100% - 22px); padding: 10px; border: 1px solid #ccc; border-radius: 8px; }
+        .pix-copy-area button { background-color: var(--primary-blue); color: white; padding: 12px 18px; border: none; border-radius: 8px; cursor: pointer; margin-top: 10px; font-weight: bold; transition: background-color 0.3s ease; }
+        .pix-copy-area button:hover { background-color: var(--accent-green-dark); }
+
+        .sponsor-section {
+            clear: both;
+            background: var(--primary-blue);
+            color: var(--text-light);
+            padding: 40px;
+            margin-top: 20px;
+            border-radius: 16px;
+            text-align: center;
+        }
+        .sponsor-section h2 { color: var(--accent-green-light); border-bottom-color: var(--accent-green-light); }
+
+        .sponsor-form input, .sponsor-form button { width: calc(100% - 24px); padding: 14px; margin-top: 10px; border-radius: 8px; border: none; font-size: 1em; }
+        .sponsor-form input { background-color: #f0f4f8; }
+        .sponsor-form button { background-color: var(--accent-green-light); color: var(--primary-blue); font-weight: bold; cursor: pointer; transition: background-color 0.3s ease; font-size: 1.1em; }
+        .sponsor-form button:hover { background-color: #d8ff7a; }
+
+        footer {
+            clear: both;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            background: var(--text-light);
+            color: var(--primary-blue);
+            margin-top: 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
         .footer-logo { height: 50px; }
     </style>
 </head>
@@ -88,12 +282,38 @@
                     <strong>Aviso:</strong> Clique nos projetos abaixo para visualizar a apresentação individual de cada oportunidade.
                 </div>
                  <div class="project-grid">
-                     <a href="https://ctb-tm.github.io/thiagosilva-tm/" class="project-link" target="_blank"><span class="icon">🏓</span><span>THIAGO SILVA</span></a>
-                     <a href="https://ctb-tm.github.io/davilobo-tm/" class="project-link" target="_blank"><span class="icon">🏓</span><span>DAVI LOBO</span></a>
-                     <a href="https://ctb-tm.github.io/marceloferrao-tm/" class="project-link" target="_blank"><span class="icon">🏓</span><span>MARCELO FERRÃO</span></a>
-                     <a href="https://ctb-tm.github.io/rafaeloliveira-tm/" class="project-link" target="_blank"><span class="icon">🏓</span><span>RAFAEL OLIVEIRA</span></a>
-                     <a href="https://ctb-tm.github.io/handysolar-open-tennis/" class="project-link" target="_blank"><span class="icon">🎾</span><span>Tênis</span></a>
-                     <a href="https://pfeira.github.io/ctb-salvador/" class="project-link" target="_blank"><span class="icon">🏓</span><span>Tênis de Mesa</span></a>
+                    <a href="https://ctb-tm.github.io/thiagosilva-tm/" class="project-link" target="_blank">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M19.1432 4.85693L13.1432 10.8569C12.953 11.0471 12.7262 11.1966 12.4777 11.2965C12.2291 11.3965 11.9644 11.445 11.7002 11.4395C9.40024 11.4395 5.50024 13.0495 5.10024 18.8995C6.90024 18.0995 8.16924 17.5295 9.70024 16.2995C10.6002 15.5995 11.3002 14.2995 11.7002 13.6995C11.7067 13.4353 11.7552 13.1706 11.8552 12.9221C11.9551 12.6735 12.1046 12.4468 12.2949 12.2565L18.2949 6.25654C19.9949 7.95654 21.0132 4.15693 19.1432 4.85693Z"/></svg>
+                        <span>THIAGO SILVA</span>
+                    </a>
+                    <a href="https://ctb-tm.github.io/davilobo-tm/" class="project-link" target="_blank">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M19.1432 4.85693L13.1432 10.8569C12.953 11.0471 12.7262 11.1966 12.4777 11.2965C12.2291 11.3965 11.9644 11.445 11.7002 11.4395C9.40024 11.4395 5.50024 13.0495 5.10024 18.8995C6.90024 18.0995 8.16924 17.5295 9.70024 16.2995C10.6002 15.5995 11.3002 14.2995 11.7002 13.6995C11.7067 13.4353 11.7552 13.1706 11.8552 12.9221C11.9551 12.6735 12.1046 12.4468 12.2949 12.2565L18.2949 6.25654C19.9949 7.95654 21.0132 4.15693 19.1432 4.85693Z"/></svg>
+                        <span>DAVI LOBO</span>
+                    </a>
+                    <a href="https://ctb-tm.github.io/marceloferrao-tm/" class="project-link" target="_blank">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M19.1432 4.85693L13.1432 10.8569C12.953 11.0471 12.7262 11.1966 12.4777 11.2965C12.2291 11.3965 11.9644 11.445 11.7002 11.4395C9.40024 11.4395 5.50024 13.0495 5.10024 18.8995C6.90024 18.0995 8.16924 17.5295 9.70024 16.2995C10.6002 15.5995 11.3002 14.2995 11.7002 13.6995C11.7067 13.4353 11.7552 13.1706 11.8552 12.9221C11.9551 12.6735 12.1046 12.4468 12.2949 12.2565L18.2949 6.25654C19.9949 7.95654 21.0132 4.15693 19.1432 4.85693Z"/></svg>
+                        <span>MARCELO FERRÃO</span>
+                    </a>
+                    <a href="https://ctb-tm.github.io/rafaeloliveira-tm/" class="project-link" target="_blank">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M19.1432 4.85693L13.1432 10.8569C12.953 11.0471 12.7262 11.1966 12.4777 11.2965C12.2291 11.3965 11.9644 11.445 11.7002 11.4395C9.40024 11.4395 5.50024 13.0495 5.10024 18.8995C6.90024 18.0995 8.16924 17.5295 9.70024 16.2995C10.6002 15.5995 11.3002 14.2995 11.7002 13.6995C11.7067 13.4353 11.7552 13.1706 11.8552 12.9221C11.9551 12.6735 12.1046 12.4468 12.2949 12.2565L18.2949 6.25654C19.9949 7.95654 21.0132 4.15693 19.1432 4.85693Z"/></svg>
+                        <span>RAFAEL OLIVEIRA</span>
+                    </a>
+                     <a href="https://ctb-tm.github.io/katharinafontes-tm/" class="project-link" target="_blank">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M19.1432 4.85693L13.1432 10.8569C12.953 11.0471 12.7262 11.1966 12.4777 11.2965C12.2291 11.3965 11.9644 11.445 11.7002 11.4395C9.40024 11.4395 5.50024 13.0495 5.10024 18.8995C6.90024 18.0995 8.16924 17.5295 9.70024 16.2995C10.6002 15.5995 11.3002 14.2995 11.7002 13.6995C11.7067 13.4353 11.7552 13.1706 11.8552 12.9221C11.9551 12.6735 12.1046 12.4468 12.2949 12.2565L18.2949 6.25654C19.9949 7.95654 21.0132 4.15693 19.1432 4.85693Z"/></svg>
+                        <span>KATHARINA FONTES</span>
+                    </a>
+                    <a href="https://ctb-tm.github.io/raquetes-futuro-rededor/" class="project-link" target="_blank">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M19.1432 4.85693L13.1432 10.8569C12.953 11.0471 12.7262 11.1966 12.4777 11.2965C12.2291 11.3965 11.9644 11.445 11.7002 11.4395C9.40024 11.4395 5.50024 13.0495 5.10024 18.8995C6.90024 18.0995 8.16924 17.5295 9.70024 16.2995C10.6002 15.5995 11.3002 14.2995 11.7002 13.6995C11.7067 13.4353 11.7552 13.1706 11.8552 12.9221C11.9551 12.6735 12.1046 12.4468 12.2949 12.2565L18.2949 6.25654C19.9949 7.95654 21.0132 4.15693 19.1432 4.85693Z"/></svg>
+                        <span>PROJETO SALVADOR</span>
+                    </a>
+                    <a href="https://pfeira.github.io/ctb-salvador/" class="project-link" target="_blank">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M19.1432 4.85693L13.1432 10.8569C12.953 11.0471 12.7262 11.1966 12.4777 11.2965C12.2291 11.3965 11.9644 11.445 11.7002 11.4395C9.40024 11.4395 5.50024 13.0495 5.10024 18.8995C6.90024 18.0995 8.16924 17.5295 9.70024 16.2995C10.6002 15.5995 11.3002 14.2995 11.7002 13.6995C11.7067 13.4353 11.7552 13.1706 11.8552 12.9221C11.9551 12.6735 12.1046 12.4468 12.2949 12.2565L18.2949 6.25654C19.9949 7.95654 21.0132 4.15693 19.1432 4.85693Z"/></svg>
+                        <span>ESCOLAS MUNICIPAIS</span>
+                    </a>
+                    <a href="https://ctb-tm.github.io/handysolar-open-tennis/" class="project-link" target="_blank">
+                         <svg class="icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M13.75 6.04013C15.83 6.33013 16.58 8.65013 15.22 10.0101C14.42 10.8101 13.31 11.1901 12.25 11.1901C10.17 11.4801 9.42 9.16013 10.78 7.80013C11.58 7.00013 12.69 6.62013 13.75 6.62013M13.75 5.04013C12.39 5.04013 11.03 5.59013 10 6.62013C8.2 8.42013 9.22 11.5101 12.25 12.1901C13.61 12.1901 14.97 11.6401 16 10.6101C17.8 8.81013 16.78 5.72013 13.75 5.04013Z M12.81 12.8801L7.53 18.1601C7.14 18.5501 7.14 19.1801 7.53 19.5701C7.92 19.9601 8.55 19.9601 8.94 19.5701L14.22 14.2901C14.5055 14.0163 14.6865 13.6559 14.73 13.2701L15.3 8.35013L13.88 8.18013L13.31 13.1001C13.2687 13.4542 13.0903 13.7845 12.81 14.0401L12.81 12.8801Z" /></svg>
+                        <span>TÊNIS</span>
+                    </a>
                 </div>
             </div>
             
@@ -125,9 +345,8 @@
         <div class="modal-content">
             <span class="close-button">&times;</span>
             <h3>Doação para o Projeto</h3>
-            <p><strong>Beneficiário:</strong> Clube dos Tenistas da Bahia</p>
-            <p><strong>CNPJ:</strong> 23.146.328/0001-16</p>
-            <img src="qrcode.png" alt="QR Code PIX">
+            <p><strong>Beneficiário:</strong> Clube dos Tenistas da Bahia</p> <p><strong>CNPJ:</strong> 23.146.328/0001-16</p>
+            <img src="qrcode.png" alt="QR Code PIX" style="max-width: 200px;">
             <div class="pix-copy-area">
                 <p><strong>PIX Copia e Cola:</strong></p>
                 <input type="text" value="SEU_CODIGO_PIX_COPIA_E_COLA_VAI_AQUI" id="pix-code" readonly>
@@ -143,11 +362,16 @@
         btn.onclick = function() { modal.style.display = "block"; }
         span.onclick = function() { modal.style.display = "none"; }
         window.onclick = function(event) { if (event.target == modal) { modal.style.display = "none"; } }
+
         document.getElementById("copy-button").addEventListener("click", function() {
             var copyText = document.getElementById("pix-code");
-            copyText.select();
-            document.execCommand("copy");
-            alert("Código PIX copiado!");
+            
+            // Usando a API de Clipboard moderna e mais segura
+            navigator.clipboard.writeText(copyText.value).then(function() {
+                alert("Código PIX copiado!");
+            }, function(err) {
+                alert("Não foi possível copiar o código: ", err);
+            });
         });
     </script>
 </body>
