@@ -105,25 +105,56 @@
         .info-box p, .info-box li { line-height: 1.6; }
 
         .federal-project-list {
-            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
             padding: 0;
             margin-top: 20px;
         }
         .federal-project-item {
-            display: flex;
-            align-items: center;
-            padding: 15px 10px;
             border-bottom: 1px solid #e2e8f0;
-            gap: 15px;
+            padding-bottom: 25px;
         }
         .federal-project-item:last-child {
             border-bottom: none;
+            padding-bottom: 0;
+        }
+        .project-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .project-icon {
+            width: 32px;
+            height: 32px;
+            color: var(--primary-blue);
+            flex-shrink: 0;
+        }
+        .project-title-group {
+            flex-grow: 1;
+        }
+        .project-title-group a {
+            text-decoration: none;
+        }
+        .project-name {
+            color: var(--primary-blue);
+            font-weight: 700;
+            font-size: 1.2em;
+            margin: 0;
+        }
+        .project-name:hover {
+            text-decoration: underline;
+        }
+        .project-number {
+            font-weight: 500;
+            color: #555;
+            font-size: 0.9em;
         }
         .btn-abrir {
             background-color: var(--accent-red);
             color: var(--text-light);
-            padding: 8px 15px;
-            border-radius: 6px;
+            padding: 10px 20px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
             font-size: 0.9em;
@@ -133,18 +164,12 @@
         .btn-abrir:hover {
             background-color: #b51d1d;
         }
-        .project-number {
-            font-weight: bold;
-            color: var(--primary-blue);
-        }
-        .project-name {
-            color: var(--primary-blue);
-            flex: 1; 
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .project-name:hover {
-            text-decoration: underline;
+        .project-summary {
+            margin-top: 15px;
+            margin-left: 47px; /* Alinha com o texto do título */
+            color: #333;
+            line-height: 1.6;
+            font-style: italic;
         }
         
         footer {
@@ -167,7 +192,7 @@
         <header>
             <img src="ctb.png" alt="Logo CTB" class="header-logo">
             <h1>LEI DE INCENTIVO FEDERAL</h1>
-            <img src="viva.png" alt="Logo Viva Esporte" class="header-logo">
+            <img src="lie.png" alt="Logo Lei de Incentivo ao Esporte" class="header-logo">
         </header>
 
         <nav>
@@ -178,7 +203,7 @@
         
         <div class="info-box">
             <h2>O que é a Lei de Incentivo ao Esporte?</h2>
-            <p>A Lei de Incentivo ao Esporte (Lei nº 11.438/06) é um programa do Governo Federal que permite a empresas e pessoas físicas investirem parte do que pagariam de Imposto de Renda (IR) em projetos esportivos aprovados pela Secretaria Especial do Esporte do Ministério da Cidadania.</p>
+            <p>A Lei de Incentivo ao Esporte (Lei nº 11.438/06) é um programa do Governo Federal que permite que empresas e pessoas físicas invistam parte do que pagariam de Imposto de Renda (IR) em projetos esportivos aprovados pela Secretaria Especial do Esporte do Ministério da Cidadania.</p>
             <ul>
                 <li><strong>Pessoas Jurídicas (empresas):</strong> Tributadas com base no lucro real podem deduzir até 2% do IR devido.</li>
                 <li><strong>Pessoas Físicas (cidadãos):</strong> Que fazem a declaração completa podem deduzir até 7% do IR devido.</li>
@@ -187,38 +212,56 @@
 
         <div class="section">
             <h2>Projetos Aptos (Lei Federal de Incentivo ao Esporte - IR)</h2>
-            <ul class="federal-project-list">
-                <li class="federal-project-item">
-                    <a href="https://ctb-tm.github.io/estudar-com-tenis-de-mesa/" target="_blank" class="btn-abrir">ABRIR</a>
-                    <span class="project-number">1.</span>
-                    <a href="https://ctb-tm.github.io/estudar-com-tenis-de-mesa/" target="_blank" class="project-name">Estudar com Tênis de Mesa - Barrocas</a>
-                </li>
-                <li class="federal-project-item">
-                    <a href="https://ctb-tm.github.io/estudar-com-tenis-de-mesa/" target="_blank" class="btn-abrir">ABRIR</a>
-                    <span class="project-number">2.</span>
-                    <a href="https://ctb-tm.github.io/estudar-com-tenis-de-mesa/" target="_blank" class="project-name">Estudar com Tênis de Mesa - Simões Filho</a>
-                </li>
-                <li class="federal-project-item">
-                    <a href="https://ctb-tm.github.io/estudar-com-tenis-de-mesa/" target="_blank" class="btn-abrir">ABRIR</a>
-                    <span class="project-number">3.</span>
-                    <a href="https://ctb-tm.github.io/estudar-com-tenis-de-mesa/" target="_blank" class="project-name">Estudar com Tênis de Mesa - Teofilândia</a>
-                </li>
-                <li class="federal-project-item">
-                    <a href="https://ctb-tm.github.io/oficinas-tenis-ano2/" target="_blank" class="btn-abrir">ABRIR</a>
-                    <span class="project-number">4.</span>
-                    <a href="https://ctb-tm.github.io/oficinas-tenis-ano2/" target="_blank" class="project-name">Oficinas Educacionais de Tênis Ano 2</a>
-                </li>
-                <li class="federal-project-item">
-                    <a href="https://ctb-tm.github.io/oficinas-tenis-de-mesa-ano-2/" target="_blank" class="btn-abrir">ABRIR</a>
-                    <span class="project-number">5.</span>
-                    <a href="https://ctb-tm.github.io/oficinas-tenis-de-mesa-ano-2/" target="_blank" class="project-name">Oficinas Educacionais de Tênis de Mesa Ano 2</a>
-                </li>
-                 <li class="federal-project-item">
-                    <a href="https://ctb-tm.github.io/festival-imprimir/" target="_blank" class="btn-abrir">ABRIR</a>
-                    <span class="project-number">6.</span>
-                    <a href="https://ctb-tm.github.io/festival-imprimir/" target="_blank" class="project-name">Festival de Esportes da Bahia</a>
-                </li>
-            </ul>
+            <div class="federal-project-list">
+                
+                <div class="federal-project-item">
+                    <div class="project-header">
+                        <svg class="project-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M19.1432 4.85693L13.1432 10.8569C12.953 11.0471 12.7262 11.1966 12.4777 11.2965C12.2291 11.3965 11.9644 11.445 11.7002 11.4395C9.40024 11.4395 5.50024 13.0495 5.10024 18.8995C6.90024 18.0995 8.16924 17.5295 9.70024 16.2995C10.6002 15.5995 11.3002 14.2995 11.7002 13.6995C11.7067 13.4353 11.7552 13.1706 11.8552 12.9221C11.9551 12.6735 12.1046 12.4468 12.2949 12.2565L18.2949 6.25654C19.9949 7.95654 21.0132 4.15693 19.1432 4.85693Z"/></svg>
+                        <div class="project-title-group">
+                            <a href="https://ctb-tm.github.io/estudar-com-tenis-de-mesa/" target="_blank"><p class="project-name">Estudar com Tênis de Mesa</p></a>
+                            <span class="project-number">Projetos 1, 2 e 3: Barrocas, Simões Filho e Teofilândia</span>
+                        </div>
+                        <a href="https://ctb-tm.github.io/estudar-com-tenis-de-mesa/" target="_blank" class="btn-abrir">ABRIR</a>
+                    </div>
+                    <p class="project-summary">[Breve resumo sobre o objetivo e o público-alvo do projeto. Detalhes sobre as atividades e o impacto esperado na comunidade.]</p>
+                </div>
+
+                <div class="federal-project-item">
+                    <div class="project-header">
+                        <svg class="project-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M13.75 6.04013C15.83 6.33013 16.58 8.65013 15.22 10.0101C14.42 10.8101 13.31 11.1901 12.25 11.1901C10.17 11.4801 9.42 9.16013 10.78 7.80013C11.58 7.00013 12.69 6.62013 13.75 6.62013M13.75 5.04013C12.39 5.04013 11.03 5.59013 10 6.62013C8.2 8.42013 9.22 11.5101 12.25 12.1901C13.61 12.1901 14.97 11.6401 16 10.6101C17.8 8.81013 16.78 5.72013 13.75 5.04013Z M12.81 12.8801L7.53 18.1601C7.14 18.5501 7.14 19.1801 7.53 19.5701C7.92 19.9601 8.55 19.9601 8.94 19.5701L14.22 14.2901C14.5055 14.0163 14.6865 13.6559 14.73 13.2701L15.3 8.35013L13.88 8.18013L13.31 13.1001C13.2687 13.4542 13.0903 13.7845 12.81 14.0401L12.81 12.8801Z" /></svg>
+                        <div class="project-title-group">
+                           <a href="https://ctb-tm.github.io/oficinas-tenis-ano2/" target="_blank"><p class="project-name">Oficinas Educacionais de Tênis Ano 2</p></a>
+                           <span class="project-number">Projeto 4</span>
+                        </div>
+                        <a href="https://ctb-tm.github.io/oficinas-tenis-ano2/" target="_blank" class="btn-abrir">ABRIR</a>
+                    </div>
+                    <p class="project-summary">[Breve resumo sobre o objetivo e o público-alvo do projeto. Detalhes sobre as atividades e o impacto esperado na comunidade.]</p>
+                </div>
+
+                <div class="federal-project-item">
+                    <div class="project-header">
+                        <svg class="project-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M19.1432 4.85693L13.1432 10.8569C12.953 11.0471 12.7262 11.1966 12.4777 11.2965C12.2291 11.3965 11.9644 11.445 11.7002 11.4395C9.40024 11.4395 5.50024 13.0495 5.10024 18.8995C6.90024 18.0995 8.16924 17.5295 9.70024 16.2995C10.6002 15.5995 11.3002 14.2995 11.7002 13.6995C11.7067 13.4353 11.7552 13.1706 11.8552 12.9221C11.9551 12.6735 12.1046 12.4468 12.2949 12.2565L18.2949 6.25654C19.9949 7.95654 21.0132 4.15693 19.1432 4.85693Z"/></svg>
+                        <div class="project-title-group">
+                            <a href="https://ctb-tm.github.io/oficinas-tenis-de-mesa-ano-2/" target="_blank"><p class="project-name">Oficinas Educacionais de Tênis de Mesa Ano 2</p></a>
+                            <span class="project-number">Projeto 5</span>
+                        </div>
+                        <a href="https://ctb-tm.github.io/oficinas-tenis-de-mesa-ano-2/" target="_blank" class="btn-abrir">ABRIR</a>
+                    </div>
+                    <p class="project-summary">[Breve resumo sobre o objetivo e o público-alvo do projeto. Detalhes sobre as atividades e o impacto esperado na comunidade.]</p>
+                </div>
+                
+                <div class="federal-project-item">
+                    <div class="project-header">
+                        <svg class="project-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.65,6.35C16.2,4.9 14.21,4 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20C15.73,20 18.84,17.45 19.73,14H17.65C16.83,16.33 14.61,18 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6C13.66,6 15.14,6.69 16.22,7.78L13,11H20V4L17.65,6.35Z" /></svg>
+                        <div class="project-title-group">
+                            <a href="https://ctb-tm.github.io/festival-imprimir/" target="_blank"><p class="project-name">Festival de Esportes da Bahia</p></a>
+                            <span class="project-number">Projeto 6</span>
+                        </div>
+                        <a href="https://ctb-tm.github.io/festival-imprimir/" target="_blank" class="btn-abrir">ABRIR</a>
+                    </div>
+                    <p class="project-summary">[Breve resumo sobre o objetivo e o público-alvo do projeto. Detalhes sobre as atividades e o impacto esperado na comunidade.]</p>
+                </div>
+            </div>
         </div>
 
         <footer>
