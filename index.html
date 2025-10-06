@@ -12,7 +12,6 @@
             --primary-blue: #19305A;
             --accent-green-dark: #2BA02D;
             --accent-green-light: #C3FE4D;
-            --accent-red: #d92525;
             --background-light: #f7f9fc;
             --text-light: #ffffff;
             --text-dark: #333333;
@@ -202,52 +201,7 @@
 
         tr:nth-child(even) { background-color: #f8fafc; }
         tr:hover { background-color: #f1f5f9; }
-
-        /* ESTILOS PARA NOVA SEÇÃO DE PROJETOS FEDERAIS */
-        .federal-project-list {
-            list-style: none;
-            padding: 0;
-            margin-top: 20px;
-        }
-        .federal-project-item {
-            display: flex;
-            align-items: center;
-            padding: 15px 10px;
-            border-bottom: 1px solid #e2e8f0;
-            gap: 15px;
-        }
-        .federal-project-item:last-child {
-            border-bottom: none;
-        }
-        .btn-abrir {
-            background-color: var(--accent-red);
-            color: var(--text-light);
-            padding: 8px 15px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 0.9em;
-            transition: background-color 0.3s ease;
-            flex-shrink: 0; /* Impede que o botão encolha */
-        }
-        .btn-abrir:hover {
-            background-color: #b51d1d;
-        }
-        .project-number {
-            font-weight: bold;
-            color: var(--primary-blue);
-        }
-        .project-name { /* Estilo para o link do nome do projeto */
-            color: var(--primary-blue);
-            flex: 1; 
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .project-name:hover {
-            text-decoration: underline;
-        }
-        /* FIM DOS ESTILOS DA NOVA SEÇÃO */
-
+        
         .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.7); }
         .modal-content { background-color: #fefefe; margin: 10% auto; padding: 25px; border: 1px solid #888; width: 90%; max-width: 350px; text-align: center; border-radius: 16px; }
         .close-button { color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
@@ -368,42 +322,7 @@
                 <table><thead><tr><th>Valor ISS Pago/Ano (R$)</th><th>Potencial de Incentivo (20%) (R$)</th><th>Aporte Mensal Máximo (R$)</th></tr></thead><tbody><tr><td>100.000</td><td>20.000</td><td>1.666,67</td></tr><tr><td>200.000</td><td>40.000</td><td>3.333,33</td></tr><tr><td>300.000</td><td>60.000</td><td>5.000,00</td></tr><tr><td>400.000</td><td>80.000</td><td>6.666,67</td></tr><tr><td>500.000</td><td>100.000</td><td>8.333,33</td></tr><tr><td>600.000</td><td>120.000</td><td>10.000,00</td></tr><tr><td>700.000</td><td>140.000</td><td>11.666,67</td></tr><tr><td>800.000</td><td>160.000</td><td>13.333,33</td></tr><tr><td>900.000</td><td>180.000</td><td>15.000,00</td></tr><tr><td>1.000.000</td><td>200.000</td><td>16.666,67</td></tr><tr><td>1.100.000</td><td>220.000</td><td>18.333,33</td></tr><tr><td>1.200.000</td><td>240.000</td><td>20.000,00</td></tr></tbody></table>
             </div>
 
-            <div class="section">
-                <h2>Projetos Aptos (Lei Federal de Incentivo ao Esporte - IR)</h2>
-                <ul class="federal-project-list">
-                    <li class="federal-project-item">
-                        <a href="https://ctb-tm.github.io/estudar-com-tenis-de-mesa/" target="_blank" class="btn-abrir">ABRIR</a>
-                        <span class="project-number">1.</span>
-                        <a href="https://ctb-tm.github.io/estudar-com-tenis-de-mesa/" target="_blank" class="project-name">Estudar com Tênis de Mesa - Barrocas</a>
-                    </li>
-                    <li class="federal-project-item">
-                        <a href="https://ctb-tm.github.io/estudar-com-tenis-de-mesa/" target="_blank" class="btn-abrir">ABRIR</a>
-                        <span class="project-number">2.</span>
-                        <a href="https://ctb-tm.github.io/estudar-com-tenis-de-mesa/" target="_blank" class="project-name">Estudar com Tênis de Mesa - Simões Filho</a>
-                    </li>
-                    <li class="federal-project-item">
-                        <a href="https://ctb-tm.github.io/estudar-com-tenis-de-mesa/" target="_blank" class="btn-abrir">ABRIR</a>
-                        <span class="project-number">3.</span>
-                        <a href="https://ctb-tm.github.io/estudar-com-tenis-de-mesa/" target="_blank" class="project-name">Estudar com Tênis de Mesa - Teofilândia</a>
-                    </li>
-                    <li class="federal-project-item">
-                        <a href="https://ctb-tm.github.io/oficinas-tenis-ano2/" target="_blank" class="btn-abrir">ABRIR</a>
-                        <span class="project-number">4.</span>
-                        <a href="https://ctb-tm.github.io/oficinas-tenis-ano2/" target="_blank" class="project-name">Oficinas Educacionais de Tênis Ano 2</a>
-                    </li>
-                    <li class="federal-project-item">
-                        <a href="https://ctb-tm.github.io/oficinas-tenis-de-mesa-ano-2/" target="_blank" class="btn-abrir">ABRIR</a>
-                        <span class="project-number">5.</span>
-                        <a href="https://ctb-tm.github.io/oficinas-tenis-de-mesa-ano-2/" target="_blank" class="project-name">Oficinas Educacionais de Tênis de Mesa Ano 2</a>
-                    </li>
-                     <li class="federal-project-item">
-                        <a href="https://ctb-tm.github.io/festival-imprimir/" target="_blank" class="btn-abrir">ABRIR</a>
-                        <span class="project-number">6.</span>
-                        <a href="https://ctb-tm.github.io/festival-imprimir/" target="_blank" class="project-name">Festival de Esportes da Bahia</a>
-                    </li>
-                </ul>
-            </div>
-            </div>
+        </div>
 
         <div class="section sponsor-section">
             <h2>QUERO PATROCINAR COM ISS</h2>
