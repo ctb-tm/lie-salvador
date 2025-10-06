@@ -228,6 +228,7 @@
             font-weight: bold;
             font-size: 0.9em;
             transition: background-color 0.3s ease;
+            flex-shrink: 0; /* Impede que o botão encolha */
         }
         .btn-abrir:hover {
             background-color: #b51d1d;
@@ -236,9 +237,14 @@
             font-weight: bold;
             color: var(--primary-blue);
         }
-        .project-name {
+        .project-name { /* Estilo para o link do nome do projeto */
             color: var(--primary-blue);
-            flex: 1; /* Faz o nome ocupar o espaço restante */
+            flex: 1; 
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .project-name:hover {
+            text-decoration: underline;
         }
         /* FIM DOS ESTILOS DA NOVA SEÇÃO */
 
@@ -368,32 +374,32 @@
                     <li class="federal-project-item">
                         <a href="https://ctb-tm.github.io/estudar-com-tenis-de-mesa/" target="_blank" class="btn-abrir">ABRIR</a>
                         <span class="project-number">1.</span>
-                        <span class="project-name">Estudar com Tênis de Mesa - Barrocas</span>
+                        <a href="https://ctb-tm.github.io/estudar-com-tenis-de-mesa/" target="_blank" class="project-name">Estudar com Tênis de Mesa - Barrocas</a>
                     </li>
                     <li class="federal-project-item">
                         <a href="https://ctb-tm.github.io/estudar-com-tenis-de-mesa/" target="_blank" class="btn-abrir">ABRIR</a>
                         <span class="project-number">2.</span>
-                        <span class="project-name">Estudar com Tênis de Mesa - Simões Filho</span>
+                        <a href="https://ctb-tm.github.io/estudar-com-tenis-de-mesa/" target="_blank" class="project-name">Estudar com Tênis de Mesa - Simões Filho</a>
                     </li>
                     <li class="federal-project-item">
                         <a href="https://ctb-tm.github.io/estudar-com-tenis-de-mesa/" target="_blank" class="btn-abrir">ABRIR</a>
                         <span class="project-number">3.</span>
-                        <span class="project-name">Estudar com Tênis de Mesa - Teofilândia</span>
+                        <a href="https://ctb-tm.github.io/estudar-com-tenis-de-mesa/" target="_blank" class="project-name">Estudar com Tênis de Mesa - Teofilândia</a>
                     </li>
                     <li class="federal-project-item">
                         <a href="https://ctb-tm.github.io/oficinas-tenis-ano2/" target="_blank" class="btn-abrir">ABRIR</a>
                         <span class="project-number">4.</span>
-                        <span class="project-name">Oficinas Educacionais de Tênis Ano 2</span>
+                        <a href="https://ctb-tm.github.io/oficinas-tenis-ano2/" target="_blank" class="project-name">Oficinas Educacionais de Tênis Ano 2</a>
                     </li>
                     <li class="federal-project-item">
                         <a href="https://ctb-tm.github.io/oficinas-tenis-de-mesa-ano-2/" target="_blank" class="btn-abrir">ABRIR</a>
                         <span class="project-number">5.</span>
-                        <span class="project-name">Oficinas Educacionais de Tênis de Mesa Ano 2</span>
+                        <a href="https://ctb-tm.github.io/oficinas-tenis-de-mesa-ano-2/" target="_blank" class="project-name">Oficinas Educacionais de Tênis de Mesa Ano 2</a>
                     </li>
                      <li class="federal-project-item">
                         <a href="https://ctb-tm.github.io/festival-imprimir/" target="_blank" class="btn-abrir">ABRIR</a>
                         <span class="project-number">6.</span>
-                        <span class="project-name">Festival de Esportes da Bahia</span>
+                        <a href="https://ctb-tm.github.io/festival-imprimir/" target="_blank" class="project-name">Festival de Esportes da Bahia</a>
                     </li>
                 </ul>
             </div>
